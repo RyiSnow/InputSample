@@ -30,6 +30,7 @@ public class Input {
 	
 	public Input(){
 		
+		//　ウィンドウを作成
 		window = new JFrame();
 		window.setSize(800, 600);
 		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -37,6 +38,7 @@ public class Input {
 		window.setLayout(null);
 		con = window.getContentPane();
 	
+	        // テキスト表示部分を作成
 		textPanel = new JPanel();
 		textPanel.setBounds(150, 250, 500, 100);
 		textPanel.setBackground(Color.black);
@@ -46,6 +48,7 @@ public class Input {
 		textPanel.add(textLabel);
 		con.add(textPanel);
 		
+		//　テキスト入力ボックスとENTERボタンを作成
 		inputPanel = new JPanel();
 		inputPanel.setBounds(150, 450, 500, 50);
 		inputPanel.setBackground(Color.black);
@@ -63,6 +66,7 @@ public class Input {
 		window.setVisible(true);
 	}
 	
+	// 入力されたテキストの取得と表示
 	public class InputHandler implements ActionListener{
 		
 		public void actionPerformed(ActionEvent event){
